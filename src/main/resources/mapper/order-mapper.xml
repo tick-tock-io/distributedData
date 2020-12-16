@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jdd.distributedData.distributedData.dao.mapper.OrderMapper" >
+
+    <resultMap id="BaseResultMap" type="com.jdd.distributedData.distributedData.domain.Order" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="order_id" property="orderId" jdbcType="VARCHAR" />
+        <result column="product_name" property="productName" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <insert id="saveOrder" parameterType="com.jdd.distributedData.distributedData.domain.Order" >
+        INSERT INTO t_order_0 (order_id,product_name) VALUES (#{orderId}, #{productName})
+    </insert>
+
+    <select id="countOrder" resultType="java.lang.Integer">
+        SELECT count(*) from t_order_0
+    </select>
+</mapper>
