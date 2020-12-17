@@ -1,2 +1,2 @@
-# OpenSource- distributedData
-个人开源项目
+# distributedData
+* a tried project to verify mybatis + springboot + shardingspehre
