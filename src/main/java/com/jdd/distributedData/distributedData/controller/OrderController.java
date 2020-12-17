@@ -21,7 +21,9 @@ public class OrderController {
         order.setProductName(productName);
         try{
             orderService.createOrder(order);
-        } catch (Exception e) {}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return "done";
     }
 

@@ -9,10 +9,10 @@
     </resultMap>
 
     <insert id="saveOrder" parameterType="com.jdd.distributedData.distributedData.domain.Order" >
-        INSERT INTO t_order_0 (order_id,product_name) VALUES (#{orderId}, #{productName})
+        INSERT INTO t_order (order_id,product_name) VALUES (#{orderId}, #{productName})
     </insert>
 
     <select id="countOrder" resultType="java.lang.Integer">
-        SELECT count(*) from t_order_0
+        SELECT count(*) from t_order
     </select>
 </mapper>
