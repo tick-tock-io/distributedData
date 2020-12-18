@@ -8,6 +8,7 @@ public class Order {
     private Integer id;
     private Integer orderId;
     private String productName;
+    private String mobileNumber;
 
     public Integer getId() {
         return id;
@@ -31,5 +32,13 @@ public class Order {
 
     public void setProductName(String productName) {
         this.productName = productName;
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
     }
 }

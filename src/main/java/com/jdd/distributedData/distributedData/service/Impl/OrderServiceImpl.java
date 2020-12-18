@@ -16,7 +16,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public int createOrder(Order order) throws SQLException {
-        int result = orderMapper.saveOrder(order.getOrderId(), order.getProductName());
+        int result = orderMapper.saveOrder(order.getOrderId(), order.getProductName(),order.getMobileNumber());
         return result;
     }
 

@@ -15,10 +15,12 @@ public class OrderController {
 
     @GetMapping("/createOrder")
     public String createOrder(@RequestParam(value = "orderId") Integer orderId,
-                              @RequestParam(value = "productName") String productName) {
+                              @RequestParam(value = "productName") String productName,
+                              @RequestParam(value = "mobileNumber") String mobileNumber) {
         Order order = new Order();
         order.setOrderId(orderId);
         order.setProductName(productName);
+        order.setMobileNumber(mobileNumber);
         try{
             orderService.createOrder(order);
         } catch (Exception e) {

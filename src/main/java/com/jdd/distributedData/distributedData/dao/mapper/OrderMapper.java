@@ -8,7 +8,9 @@ import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface OrderMapper extends BaseMapper{
 
-    int saveOrder(@Param("orderId") Integer orderId, @Param("productName") String productName);
+    int saveOrder(@Param("orderId") Integer orderId,
+                  @Param("productName") String productName,
+                  @Param("mobileNumber") String mobileNumber);
 
     int countOrder();
 }
