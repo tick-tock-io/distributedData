@@ -6,7 +6,7 @@ package com.jdd.distributedData.distributedData.domain;
 public class Order {
 
     private Integer id;
-    private String orderId;
+    private Integer orderId;
     private String productName;
 
     public Integer getId() {
@@ -17,11 +17,11 @@ public class Order {
         this.id = id;
     }
 
-    public String getOrderId() {
+    public Integer getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(String orderId) {
+    public void setOrderId(Integer orderId) {
         this.orderId = orderId;
     }
 

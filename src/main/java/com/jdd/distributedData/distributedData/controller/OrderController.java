@@ -14,7 +14,7 @@ public class OrderController {
     private OrderService orderService;
 
     @GetMapping("/createOrder")
-    public String createOrder(@RequestParam(value = "orderId") String orderId,
+    public String createOrder(@RequestParam(value = "orderId") Integer orderId,
                               @RequestParam(value = "productName") String productName) {
         Order order = new Order();
         order.setOrderId(orderId);
